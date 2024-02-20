@@ -1,0 +1,85 @@
+﻿# folder główny train sim
+
+#gameRoot = F:/train simulator
+gameRoot = C:/ts
+#gameRoot = C:/tsb
+#gameRoot = F:/tst
+#gameRoot = F:/fdg/tsd3
+# nazwa trasy (folderu) do wczytania
+
+#routeName = cmk
+#routeName = bbb
+#routeName = poznan_tram
+#routeName = bkd2
+#routeName = usa2l
+#routeName = www
+#routeName = traska
+#routeName = aaa
+#routeName = ICE-HB
+#routeName = tutorial
+#routeName = Warszawa - Kraków
+routeName = Reda-Hel_ver11
+#routeName = demo1
+#routeName = krkolk
+
+# optional start tile
+#startTileX = -5439
+#startTileY = 14865
+
+# route edit
+#createNewIfNotExist = true
+writeEnabled = true
+writeTDB = true
+#deleteTrWatermarks = true
+#deleteViewDbSpheres = true
+
+# geo data
+geoPath = C:/hgst
+
+# misc
+#systemTheme = true
+#colorConView = #FF0000
+#colorShapeView = #FFFFFF
+#toolsHidden = true
+usenNumPad = true
+tileLod = 2
+objectLod = 6000
+maxObjLag = 10
+allowObjLag = 1000
+fpsLimit = 0
+#cameraFov = 5.0
+warningBox = false
+leaveTrackShapeAfterDelete = false
+#renderTrItems = true
+useImperial = false
+#ortsEngEnable = false
+#oglDefaultLineWidth = 2
+shadowsEnabled = 1
+#textureQuality = 4
+#ignoreMissingGlobalShapes = true
+snapableOnlyRot = true
+imageMapsUrl = http://maps.googleapis.com/maps/api/staticmap?center={lat},{lon}&zoom={zoom}&size={res}x{res}&maptype=satellite&key=
+shadowLowMapSize = 2048
+#shadowMapSize = 8192
+shadowMapSize = 4096
+#AASamples = 8
+mapImageResolution = 4096
+#mapImageResolution = 8192
+cameraStickToTerrain = true
+proceduralTracks = true
+mouseSpeed = 0.5
+#mainWindowLayout = W
+#ceWindowLayout = CU1
+#useQuadTree = false
+fogColor = #D0D0FF
+fogDensity = 0.4
+fogColor = #5050AA
+fogDensity = 0.7
+#playerMode = true
+#useNetworkEng = true
+#soundEnabled = true
+#hudEnabled = true
+hudScale = 1.2
+defaultElevationBox = 0
+defaultMoveStep = 0.25
+#fullscreen = true
