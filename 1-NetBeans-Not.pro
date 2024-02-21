@@ -1,5 +1,4 @@
-# This file is generated automatically. Do not edit.
-# Use project properties -> Build -> Qt -> Expert -> Custom Definitions.
+
 TEMPLATE = app
 # DESTDIR = dist/Release_x64/QT_5.7_static_MinGW_730_x64-Windows
 TARGET = TSRE5
@@ -10,8 +9,8 @@ PKGCONFIG +=
 QT += core gui widgets network opengl websockets
 
 
-
 SOURCES += \
+main.cpp \
 AboutWindow.cpp \
 AceLib.cpp \
 ActLib.cpp \
@@ -225,8 +224,7 @@ Vector2f.cpp \
 Vector2i.cpp \
 Vector3f.cpp \
 Vector4f.cpp \
-WorldObj.cpp \
-main.cpp
+WorldObj.cpp
 
 
 HEADERS += \
