@@ -11,52 +11,221 @@ QT += core gui widgets network opengl websockets
 
 
 
-SOURCES += AboutWindow.cpp AceLib.cpp ActLib.cpp ActionChooseDialog.cpp Activity.cpp \
-ActivityEvent.cpp ActivityEventProperties.cpp ActivityEventWindow.cpp ActivityObject.cpp \
-ActivityServiceProperties.cpp ActivityServiceWindow.cpp ActivityTimetable.cpp \
-ActivityTimetableProperties.cpp ActivityTimetableWindow.cpp ActivityTools.cpp \
-ActivityTrafficProperties.cpp ActivityTrafficWindow.cpp Brush.cpp CELoadWindow.cpp \
-Camera.cpp CameraConsist.cpp CameraFree.cpp CameraRot.cpp CarSpawnerObj.cpp \
-ChooseFileDialog.cpp ClickableLabel.cpp ClientInfo.cpp ClientUsersWindow.cpp \
-ComplexLine.cpp ConEditorWindow.cpp ConInfoWidget.cpp ConLib.cpp ConListWidget.cpp \
-ConUnitsWidget.cpp Consist.cpp ContentHierarchyInfo.cpp Coords.cpp CoordsGpx.cpp \
-CoordsKml.cpp CoordsMkr.cpp CoordsRoutePlaces.cpp DynTrackObj.cpp EditFileNameDialog.cpp \
-Eng.cpp EngInfoWidget.cpp EngLib.cpp EngListWidget.cpp Environment.cpp ErrorMessage.cpp \
-ErrorMessageProperties.cpp ErrorMessagesLib.cpp ErrorMessagesWindow.cpp FileBuffer.cpp \
-FileFunctions.cpp Flex.cpp ForestObj.cpp GLH.cpp GLMatrix.cpp GLUU.cpp Game.cpp GameObj.cpp \
-GeoCoordinates.cpp GeoHgtFile.cpp GeoTerrainFile.cpp GeoTiffFile.cpp GeoTools.cpp \
-GlobalDefinitions.cpp GroupObj.cpp GuiFunct.cpp GuiGlCompass.cpp HazardObj.cpp HeightWindow.cpp \
-ImageLib.cpp Intersections.cpp LevelCrObj.cpp LoadWindow.cpp MapData.cpp MapDataOSM.cpp \
-MapDataUrlImage.cpp MapLib.cpp MapWindow.cpp MstsSoundDefinition.cpp NaviBox.cpp \
-NaviWindow.cpp NewRouteWindow.cpp OSMFeatures.cpp ObjFile.cpp ObjTools.cpp OglObj.cpp \
-OpenGL3Renderer.cpp OrtsWeatherChange.cpp OverwriteDialog.cpp PaintTexLib.cpp ParserX.cpp \
-Path.cpp PickupObj.cpp PlatformObj.cpp PlayActivitySelectWindow.cpp Pointer3d.cpp PoleObj.cpp \
-ProceduralMstsDyntrack.cpp ProceduralShape.cpp PropertiesAbstract.cpp \
-PropertiesActivityObject.cpp PropertiesActivityPath.cpp PropertiesCarspawner.cpp \
-PropertiesConsist.cpp PropertiesDyntrack.cpp PropertiesForest.cpp PropertiesGroup.cpp \
-PropertiesLevelCr.cpp PropertiesPickup.cpp PropertiesPlatform.cpp PropertiesRuler.cpp \
-PropertiesSiding.cpp PropertiesSignal.cpp PropertiesSoundRegion.cpp PropertiesSoundSource.cpp \
-PropertiesSpeedpost.cpp PropertiesStatic.cpp PropertiesTerrain.cpp PropertiesTrackItem.cpp \
-PropertiesTrackObj.cpp PropertiesTransfer.cpp PropertiesUndefined.cpp QuadTree.cpp \
-RandomConsist.cpp RandomTransformWorldObjDialog.cpp ReadFile.cpp Ref.cpp RenderItem.cpp \
-Renderer.cpp Route.cpp RouteClient.cpp RouteEditorClient.cpp RouteEditorGLWidget.cpp \
-RouteEditorServer.cpp RouteEditorWindow.cpp Ruch.cpp RulerObj.cpp SFile.cpp SFileC.cpp \
-SFileX.cpp Service.cpp Shader.cpp ShapeHierarchyInfo.cpp ShapeHierarchyWindow.cpp \
-ShapeInfoWidget.cpp ShapeLib.cpp ShapeTemplates.cpp ShapeTextureInfo.cpp \
-ShapeTexturesWindow.cpp ShapeViewWindow.cpp ShapeViewerGLWidget.cpp \
-ShapeViewerNavigatorWidget.cpp ShapeViewerWindow.cpp SigCfg.cpp SignalObj.cpp \
-SignalShape.cpp SignalType.cpp SignalWindow.cpp SignalWindowLink.cpp SimpleHud.cpp \
-Skydome.cpp SoundLib.cpp SoundList.cpp SoundManager.cpp SoundRegionObj.cpp \
-SoundSource.cpp SoundSourceObj.cpp SoundVariables.cpp SpeedPost.cpp SpeedPostDAT.cpp \
-SpeedpostObj.cpp StaticObj.cpp TDB.cpp TDBClient.cpp TFile.cpp TRitem.cpp TRnode.cpp \
-TS.cpp TSection.cpp TSectionDAT.cpp TarFile.cpp Terrain.cpp TerrainClient.cpp \
-TerrainInfo.cpp TerrainLib.cpp TerrainLibQt.cpp TerrainLibQtClient.cpp \
-TerrainLibSimple.cpp TerrainTools.cpp TerrainTreeWindow.cpp TerrainWaterWindow.cpp \
-TerrainWaterWindow2.cpp TexLib.cpp TextEditDialog.cpp TextObj.cpp Texture.cpp Tile.cpp \
-TrWatermarkObj.cpp TrackItemObj.cpp TrackObj.cpp TrackShape.cpp Traffic.cpp \
-TrainNetworkEng.cpp TransferObj.cpp TransformWorldObjDialog.cpp Trk.cpp TrkWindow.cpp \
-Undo.cpp UnsavedDialog.cpp UriImageDrawThread.cpp Vector2f.cpp Vector2i.cpp Vector3f.cpp \
-Vector4f.cpp WorldObj.cpp \
+SOURCES += \
+AboutWindow.cpp \
+AceLib.cpp \
+ActLib.cpp \
+ActionChooseDialog.cpp \
+Activity.cpp \
+ActivityEvent.cpp \
+ActivityEventProperties.cpp \
+ActivityEventWindow.cpp \
+ActivityObject.cpp \
+ActivityServiceProperties.cpp \
+ActivityServiceWindow.cpp \
+ActivityTimetable.cpp \
+ActivityTimetableProperties.cpp \
+ActivityTimetableWindow.cpp \
+ActivityTools.cpp \
+ActivityTrafficProperties.cpp \
+ActivityTrafficWindow.cpp \
+Brush.cpp CELoadWindow.cpp \
+Camera.cpp \
+CameraConsist.cpp \
+CameraFree.cpp \
+CameraRot.cpp \
+CarSpawnerObj.cpp \
+ChooseFileDialog.cpp \
+ClickableLabel.cpp \
+ClientInfo.cpp \
+ClientUsersWindow.cpp \
+ComplexLine.cpp \
+ConEditorWindow.cpp \
+ConInfoWidget.cpp \
+ConLib.cpp \
+ConListWidget.cpp \
+ConUnitsWidget.cpp \
+Consist.cpp \
+ContentHierarchyInfo.cpp \
+Coords.cpp CoordsGpx.cpp \
+CoordsKml.cpp \
+CoordsMkr.cpp \
+CoordsRoutePlaces.cpp \
+DynTrackObj.cpp \
+EditFileNameDialog.cpp \
+Eng.cpp \
+EngInfoWidget.cpp \
+EngLib.cpp \
+EngListWidget.cpp \
+Environment.cpp \
+ErrorMessage.cpp \
+ErrorMessageProperties.cpp \
+ErrorMessagesLib.cpp \
+ErrorMessagesWindow.cpp \
+FileBuffer.cpp \
+FileFunctions.cpp \
+Flex.cpp \
+ForestObj.cpp \
+GLH.cpp \
+GLMatrix.cpp \
+GLUU.cpp \
+Game.cpp \
+GameObj.cpp \
+GeoCoordinates.cpp \
+GeoHgtFile.cpp \
+GeoTerrainFile.cpp \
+GeoTiffFile.cpp \
+GeoTools.cpp \
+GlobalDefinitions.cpp \
+GroupObj.cpp \
+GuiFunct.cpp \
+GuiGlCompass.cpp \
+HazardObj.cpp \
+HeightWindow.cpp \
+ImageLib.cpp \
+Intersections.cpp \
+LevelCrObj.cpp \
+LoadWindow.cpp \
+MapData.cpp \
+MapDataOSM.cpp \
+MapDataUrlImage.cpp \
+MapLib.cpp \
+MapWindow.cpp \
+MstsSoundDefinition.cpp \
+NaviBox.cpp \
+NaviWindow.cpp \
+NewRouteWindow.cpp \
+OSMFeatures.cpp \
+ObjFile.cpp \
+ObjTools.cpp \
+OglObj.cpp \
+OpenGL3Renderer.cpp \
+OrtsWeatherChange.cpp \
+OverwriteDialog.cpp \
+PaintTexLib.cpp \
+ParserX.cpp \
+Path.cpp \
+PickupObj.cpp \
+PlatformObj.cpp \
+PlayActivitySelectWindow.cpp \
+Pointer3d.cpp \
+PoleObj.cpp \
+ProceduralMstsDyntrack.cpp \
+ProceduralShape.cpp \
+PropertiesAbstract.cpp \
+PropertiesActivityObject.cpp \
+PropertiesActivityPath.cpp \
+PropertiesCarspawner.cpp \
+PropertiesConsist.cpp \
+PropertiesDyntrack.cpp \
+PropertiesForest.cpp \
+PropertiesGroup.cpp \
+PropertiesLevelCr.cpp \
+PropertiesPickup.cpp \
+PropertiesPlatform.cpp \
+PropertiesRuler.cpp \
+PropertiesSiding.cpp \
+PropertiesSignal.cpp \
+PropertiesSoundRegion.cpp \
+PropertiesSoundSource.cpp \
+PropertiesSpeedpost.cpp \
+PropertiesStatic.cpp \
+PropertiesTerrain.cpp \
+PropertiesTrackItem.cpp \
+PropertiesTrackObj.cpp \
+PropertiesTransfer.cpp \
+PropertiesUndefined.cpp \
+QuadTree.cpp \
+RandomConsist.cpp \
+RandomTransformWorldObjDialog.cpp \
+ReadFile.cpp \
+Ref.cpp \
+RenderItem.cpp \
+Renderer.cpp \
+Route.cpp \
+RouteClient.cpp \
+RouteEditorClient.cpp \
+RouteEditorGLWidget.cpp \
+RouteEditorServer.cpp \
+RouteEditorWindow.cpp \
+Ruch.cpp \
+RulerObj.cpp \
+SFile.cpp SFileC.cpp \
+SFileX.cpp \
+Service.cpp \
+Shader.cpp \
+ShapeHierarchyInfo.cpp \
+ShapeHierarchyWindow.cpp \
+ShapeInfoWidget.cpp \
+ShapeLib.cpp \
+ShapeTemplates.cpp \
+ShapeTextureInfo.cpp \
+ShapeTexturesWindow.cpp \
+ShapeViewWindow.cpp \
+ShapeViewerGLWidget.cpp \
+ShapeViewerNavigatorWidget.cpp \
+ShapeViewerWindow.cpp \
+SigCfg.cpp \
+SignalObj.cpp \
+SignalShape.cpp \
+SignalType.cpp \
+SignalWindow.cpp \
+SignalWindowLink.cpp \
+SimpleHud.cpp \
+Skydome.cpp \
+SoundLib.cpp \
+SoundList.cpp \
+SoundManager.cpp \
+SoundRegionObj.cpp \
+SoundSource.cpp \
+SoundSourceObj.cpp \
+SoundVariables.cpp \
+SpeedPost.cpp \
+SpeedPostDAT.cpp \
+SpeedpostObj.cpp \
+StaticObj.cpp \
+TDB.cpp \
+TDBClient.cpp \
+TFile.cpp \
+TRitem.cpp \
+TRnode.cpp \
+TS.cpp \
+TSection.cpp \
+TSectionDAT.cpp \
+TarFile.cpp \
+Terrain.cpp \
+TerrainClient.cpp \
+TerrainInfo.cpp \
+TerrainLib.cpp \
+TerrainLibQt.cpp \
+TerrainLibQtClient.cpp \
+TerrainLibSimple.cpp \
+TerrainTools.cpp \
+TerrainTreeWindow.cpp \
+TerrainWaterWindow.cpp \
+TerrainWaterWindow2.cpp \
+TexLib.cpp \
+TextEditDialog.cpp \
+TextObj.cpp \
+Texture.cpp \
+Tile.cpp \
+TrWatermarkObj.cpp \
+TrackItemObj.cpp \
+TrackObj.cpp \
+TrackShape.cpp \
+Traffic.cpp \
+TrainNetworkEng.cpp \
+TransferObj.cpp \
+TransformWorldObjDialog.cpp \
+Trk.cpp TrkWindow.cpp \
+Undo.cpp \
+UnsavedDialog.cpp \
+UriImageDrawThread.cpp \
+Vector2f.cpp \
+Vector2i.cpp \
+Vector3f.cpp \
+Vector4f.cpp \
+WorldObj.cpp \
 main.cpp
 
 
