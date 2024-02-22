@@ -1,12 +1,16 @@
 
 TEMPLATE = app
 # DESTDIR = dist/Release_x64/QT_5.7_static_MinGW_730_x64-Windows
-TARGET = TSRE5
+# TARGET = TSRE5
 # VERSION = 0.7
 # CONFIG -= debug_and_release app_bundle lib_bundle
 # CONFIG += release
 PKGCONFIG +=
 QT += core gui widgets network opengl websockets
+
+# VERSION = ORRE-B2
+# DESTDIR = Dest
+TARGET = ORRE-B2
 
 
 SOURCES += \
@@ -463,10 +467,23 @@ INCLUDEPATH += C:\openal-soft-1.18.2-bin\include
 # LIBS += C:/programy/openal-soft-1.18.2-bin/libs/Win64/libOpenAL32.dll.a
 LIBS += C:\openal-soft-1.18.2-bin\libs\Win64\libOpenAL32.dll.a
 
-equals(QT_MAJOR_VERSION, 4) {
-QMAKE_CXXFLAGS += -std=c++11
-}
-equals(QT_MAJOR_VERSION, 5) {
-CONFIG += c++11
-}
+# equals(QT_MAJOR_VERSION, 4) {
+# QMAKE_CXXFLAGS += -std=c++11
+# }
+# equals(QT_MAJOR_VERSION, 5) {
+# CONFIG += c++11
+# }
+
 CONFIG += console
+
+# Generate 64 bit release file
+win32 {
+DESTDIR = $$PWD/Dest
+QMAKE_POST_LINK =  windeployqt $$shell_path($$DESTDIR/$${TARGET}.exe)
+}
+
+
+
+
+
+
